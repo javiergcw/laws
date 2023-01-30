@@ -7,14 +7,17 @@ import Image from "next/image"
 
 const Data = [
   {
+    id: 1,
     title: "Lorem ipsum",
     concept: "dolor sit amet, consectetur adipiscing elit. Phasellus venenatis, massa non."
   },
   {
+    id: 2,
     title: "Lorem ipsum",
     concept: "dolor sit amet, consectetur adipiscing elit. Phasellus venenatis, massa non."
   },
   {
+    id: 3,
     title: "Lorem ipsum",
     concept: "dolor sit amet, consectetur adipiscing elit. Phasellus venenatis, massa non."
   }
@@ -22,31 +25,37 @@ const Data = [
 
 const Practice = [
   {
+    id: 1,
     icon: "",
     title: 'Lorem ipsum dolor',
     concept: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum tempor nibh, nec ultrices enim rutrum acLorem ipsum dolor sit amet, consectetur adipiscing elit.'
   },
   {
+    id: 2,
     icon: "",
     title: 'Lorem ipsum dolor',
     concept: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum tempor nibh, nec ultrices enim rutrum acLorem ipsum dolor sit amet, consectetur adipiscing elit.'
   },
   {
+    id: 3,
     icon: "",
     title: 'Lorem ipsum dolor',
     concept: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum tempor nibh, nec ultrices enim rutrum acLorem ipsum dolor sit amet, consectetur adipiscing elit.'
   },
   {
+    id: 4,
     icon: "",
     title: 'Lorem ipsum dolor',
     concept: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum tempor nibh, nec ultrices enim rutrum acLorem ipsum dolor sit amet, consectetur adipiscing elit.'
   },
   {
+    id: 5,
     icon: "",
     title: 'Lorem ipsum dolor',
     concept: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum tempor nibh, nec ultrices enim rutrum acLorem ipsum dolor sit amet, consectetur adipiscing elit.'
   },
   {
+    id: 6,
     icon: "",
     title: 'Lorem ipsum dolor',
     concept: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum tempor nibh, nec ultrices enim rutrum acLorem ipsum dolor sit amet, consectetur adipiscing elit.'
@@ -62,7 +71,7 @@ export default function Home() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className=" flex justify-center flex-row gap-4">
               {Data.map((item) => (
-                <div className="group bg-Azul hover:bg-Dorado h-52 w-60 text-center py-4 px-5 ">
+                <div key={item.id} className="group bg-Azul hover:bg-Dorado h-52 w-60 text-center py-4 px-5 ">
                   <GoLaw className="text-Dorado group-hover:text-white text-5xl mx-auto" />
                   <h4 className="text-base font-bold text-white my-4">{item.title}</h4>
                   <p className="text-sm font-light text-white">{item.concept}</p>
@@ -129,7 +138,7 @@ export default function Home() {
         <div class="flex justify-center">
           <div class="grid grid-cols-3 gap-4 justify-center items-center w-1/2" >
             {Practice.map((item) => (
-              <div className="p-4 w-60 h-80 bg-white group hover:bg-Dorado">
+              <div key={item.id} className="p-4 w-60 h-80 bg-white group hover:bg-Dorado">
                 <TfiBag className="text-5xl text-Dorado group-hover:text-white" />
                 <h5 className="font-bold text-base text-black group-hover:text-white py-5">{item.title}</h5>
                 <p className="text-xs text-black group-hover:text-white pb-3">{item.concept}</p>
